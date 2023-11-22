@@ -14,8 +14,13 @@
 
   <body>
     <header><%= render "layouts/header" %></header>
-    <p class="notice"><%= notice %></p>
+    <main>
+      <div class="d-flex justify-content-center">
+        <%= render "searches/form" %>
+      </div>
+      <p class="notice"><%= notice %></p>
     <%= yield %>
+    </main>
     <footer><%= render "layouts/footer" %></footer>
   </body>
 </html>
