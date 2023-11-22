@@ -18,7 +18,7 @@
         <td><%= group.group_users.count %></td>
         <td>
           <% if group.is_owned_by?(current_user) %>
-            <td><%= link_to "Edit", edit_group_path(@group), class: "btn btn-sm btn-success" %></td>
+            <td><%= link_to "Edit", edit_group_path(group.id), class: "btn btn-sm btn-success" %></td>
           <% elsif group.includesUser?(current_user) %>
             <td><%= link_to "Leave this group", group_group_users_path(group.id), method: :delete, class: "btn btn-sm btn-danger" %></td>
           <% else %>
